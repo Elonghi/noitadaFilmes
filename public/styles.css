@@ -1,0 +1,73 @@
+.banner {
+    position: relative;
+    background: url('imagem3.jpeg') no-repeat center center;
+    background-size: cover;
+    background-position: center -400px;
+    padding: 150px 0;
+    color: white;
+    z-index: 1;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Overlay preto com 60% de opacidade */
+    z-index: -1;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 576px) {
+    .banner {
+        background-position: center;
+        padding: 80px 0; /* Reduz o padding no mobile */
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+}
+
+/* Ajustes no iframe */
+.embed-responsive {
+    margin-bottom: 20px;
+}
+
+/* Estilo dos links de filmes */
+.list-group-item {
+    display: flex;
+    align-items: center;
+}
+
+.list-group-item img {
+    max-width: 100px;
+    margin-right: 15px;
+}
+
+footer {
+    background-color: #343a40;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    padding: 3rem 0;
+    background-color: #333;
+}
+
+#search-results {
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+}
+
